@@ -380,7 +380,8 @@ view: totals_base {
   measure: timeonsite_total {
     label: "Time On Site"
     type: sum
-    sql: ${TABLE}.timeonsite ;;
+    sql: ${TABLE}.timeonsite / 86400;;
+    value_format: "[h]:mm:ss"
   }
   dimension: timeonsite_tier {
     label: "Time On Site Tier"
@@ -393,7 +394,7 @@ view: totals_base {
     label: "Time On Site Average Per Session"
     type: number
     sql: 1.0 * ${timeonsite_total} / NULLIF(${ga_sessions.session_count},0) ;;
-    value_format_name: decimal_2
+    value_format: "[h]:mm:ss"
   }
 
   measure: page_views_session {
