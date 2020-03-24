@@ -178,29 +178,29 @@ view: ga_sessions_base {
     type: count_distinct
     sql: ${fullVisitorId} ;;
     drill_fields: [fullVisitorId, visitStart_date, first_time_visitor, visitnumber, city, state, country, first_page, session_count]
-    action: {
-      label: "Send Campaign to these Visitors"
-      icon_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLBUWEOlVIFEKT3XWLrI_XN9N80czI1f9OFzZ7pLKav44CaDWK"
-      url: "https://www.marketo.com"
-      form_param: {
-        name: "campaign_id"
-        type: string
-        label: "Campaign ID"
-        required: yes
-        default: "948576"
-      }
-      form_param: {
-        name: "campaign_name"
-        type: string
-        label: "Campaign Name"
-        required: yes
-        default: "WeeklyTopPurchasers"
-      }
-      param: {
-        name: "list"
-        value: "{{ link }}"
-      }
-    }
+#     action: {
+#       label: "Send Campaign to these Visitors"
+#       icon_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLBUWEOlVIFEKT3XWLrI_XN9N80czI1f9OFzZ7pLKav44CaDWK"
+#       url: "https://www.marketo.com"
+#       form_param: {
+#         name: "campaign_id"
+#         type: string
+#         label: "Campaign ID"
+#         required: yes
+#         default: "948576"
+#       }
+#       form_param: {
+#         name: "campaign_name"
+#         type: string
+#         label: "Campaign Name"
+#         required: yes
+#         default: "WeeklyTopPurchasers"
+#       }
+#       param: {
+#         name: "list"
+#         value: "{{ link }}"
+#       }
+#     }
   }
 
   measure: average_sessions_ver_visitor {
