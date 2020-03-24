@@ -177,7 +177,7 @@ view: ga_sessions_base {
   measure: unique_visitors {
     type: count_distinct
     sql: ${fullVisitorId} ;;
-    drill_fields: [fullVisitorId, visitnumber, session_count, totals.hits, totals.page_views, totals.timeonsite]
+    drill_fields: [fullVisitorId, visitStart_date, first_time_visitor, visitnumber, city, state, country, first_page, session_count]
     action: {
       label: "Send Campaign to these Visitors"
       icon_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLBUWEOlVIFEKT3XWLrI_XN9N80czI1f9OFzZ7pLKav44CaDWK"
